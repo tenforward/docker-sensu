@@ -22,5 +22,3 @@ ARG SENSU_VERSION
 COPY --from=build /go/sensu-go-${SENSU_VERSION}/sensu-backend /usr/local/bin/sensu-backend
 COPY --from=build /go/sensu-go-${SENSU_VERSION}/sensu-agent /usr/local/bin/sensu-agent
 COPY --from=build /go/sensu-go-${SENSU_VERSION}/sensuctl /usr/local/bin/sensuctl
-
-CMD ["sensu-backend", "help"]
