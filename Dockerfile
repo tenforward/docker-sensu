@@ -33,4 +33,5 @@ RUN cd /usr/local/bin && \
     ln -sf /opt/sensu/bin/entrypoint.sh sensu-agent && \
     ln -sf /opt/sensu/bin/entrypoint.sh sensuctl && \
     chmod 755 /opt/sensu/bin/entrypoint.sh && \
-    chmod 755 /usr/bin/dumb-init
+    chmod 755 /usr/bin/dumb-init && \
+    apk add bash jq curl
